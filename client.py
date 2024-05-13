@@ -7,8 +7,8 @@ from datetime import datetime
 
 nickmane = input('Choose a nickname: ')
 
-HOST = socket.gethostbyname("https://echo-fxx2.onrender.com") #'localhost'
-address = (HOST, 16789)
+#HOST = socket.gethostbyname("https://echo-fxx2.onrender.com") #'localhost'
+address = ("44.226.145.213", 10000)
 
 print('Starting the client at', datetime.now())
 
@@ -41,11 +41,11 @@ def write():
 
 
 
-#receive_thread = threading.Thread(target=receive)
-#receive_thread.start()
+receive_thread = threading.Thread(target=receive)
+receive_thread.start()
 
-#write_thread = threading.Thread(target=write)
-#write_thread.start()		
+write_thread = threading.Thread(target=write)
+write_thread.start()		
 
 
  

@@ -11,7 +11,7 @@ PORT = 10000
 print("..HOST=...", HOST)
 
 
-address = (HOST, PORT) 
+address = ("localhost", PORT) 
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(address)
